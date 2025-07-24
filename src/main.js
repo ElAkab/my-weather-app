@@ -69,19 +69,19 @@ function showData(data) {
 				image.src = "./public/img/clear.png";
 				break;
 			case "Clouds":
-				image.src = "./public/img/clouds.png";
+				image.src = "/img/clouds.png";
 				break;
 			case "Mist":
-				image.src = "./public/img/mist.png";
+				image.src = "/img/mist.png";
 				break;
 			case "Rain":
-				image.src = "./public/img/rain.png";
+				image.src = "/img/rain.png";
 				break;
 			case "Snow":
-				image.src = "./public/img/snow.png";
+				image.src = "/img/snow.png";
 				break;
 			default:
-				image.src = "./public/img/404.png";
+				image.src = "/img/404.png";
 		}
 
 		// Appliquer fade-in
