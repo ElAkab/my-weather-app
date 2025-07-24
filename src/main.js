@@ -41,8 +41,10 @@ async function getWeather(city) {
 		console.log(JSON);
 
 		showData(JSON);
-		weatherContainer.classList.remove("max-h-0");
-		weatherContainer.classList.add("max-h-[600px]", "opacity-100");
+		if (weatherContainer.classList.contains("max-h-0")) {
+			weatherContainer.classList.remove("max-h-0");
+			weatherContainer.classList.add("max-h-[600px]", "opacity-100");
+		}
 	} catch (error) {
 		console.error("Failed to fetch weather data:", error);
 		showError("City not found");
