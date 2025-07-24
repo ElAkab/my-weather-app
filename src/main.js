@@ -1,8 +1,6 @@
 import { createIcons, icons } from "lucide";
 createIcons({ icons }); // Initialise tous les icônes disponibles
 
-const APIkey = "4c8d18e73474c9fea08ef453b4549c7a";
-
 let searchInput = document.getElementById("search");
 let validationBtn = document.getElementById("validation");
 let weatherContainer = document.getElementById("weather-container");
