@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather app with only TailwindCSS + JavaScript</title>
+		<link rel="stylesheet" href="./src/style.css" />
+	</head>
+	<body
+		class="bg-blue-950 text-gray-900 font-sans antialiased w-full pt-16 pb-4 px-2 sm:px-2 overflow-y-auto overflow-x-hidden"
+	>
+		<!-- main -->
+		<main class="h-screen w-full p-5 center-flex flex-col font-bold">
+			<!-- Header -->
+			<header class="w-full h-auto flex justify-center items-center mb-6">
+				<h1
+					class="text-white text-5xl font-extrabold drop-shadow-[0_2px_16px_rgba(59,130,246,0.7)] tracking-wider text-center mb-2"
+				>
+					Weather app
+				</h1>
+			</header>
+			<!-- div container -->
+			<div
+				class="bg-white w-full max-w-[36rem] min-w-0 box-border p-2 sm:p-5 rounded-[15px] mb-16"
+			>
+				<!-- Search field -->
+				<section class="w-full flex gap-1">
+					<input
+						type="text"
+						placeholder="Enter a city name"
+						class="w-full p-2 pl-3.5 border border-gray-400 hover:border-black/55 transition duration-150 rounded-l-[15px] focus:border-black placeholder:normal-case focus:placeholder-transparent uppercase"
+						id="search"
+					/>
+					<button
+						class="bg-blue-900 text-white p-2 px-[20px] rounded-r-[15px] cursor-pointer hover:bg-blue-800 active:scale-95 active:gap-0 transition duration-200"
+						id="validation"
+					>
+						Search
+					</button>
+				</section>
+				<!-- [Image, city, temp] field -->
+				<div
+					id="weather-container"
+					class="max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out"
+				>
+					<section class="w-full h-full flex justify-center flex-col p-2">
+						<img
+							class="w-[400px] h-[400px] object-contain mx-auto transition-all duration-300"
+							src="./public/img/404.png"
+							alt="Weather icon for selected location"
+							id="weather-image"
+						/>
+						<h2
+							class="text-3xl font-sans text-center capitalize mt-5 mb-1"
+							id="city"
+						>
+							No city selected
+						</h2>
+						<p class="text-center text-2xl" id="temperature">xx°C</p>
+					</section>
+					<!-- [Humidity, wind] field -->
+					<section class="w-full h-full flex justify-between">
+						<!-- Humidity -->
+						<section
+							class="flex justify-center items-center gap-1.5"
+							id="humidity-field"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="lucide lucide-droplet-icon lucide-droplet"
+							>
+								<path
+									d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"
+								/>
+							</svg>
+							<section class="flex flex-col">
+								<span class="text-center text-xl" id="humidity">xx%</span>
+								<h3 class="text-xl" id="humidity-title">Humidity</h3>
+							</section>
+						</section>
+						<!-- Wind -->
+						<section
+							class="flex justify-center items-center gap-1.5"
+							id="wind-field"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="lucide lucide-wind-icon lucide-wind"
+							>
+								<path d="M12.8 19.6A2 2 0 1 0 14 16H2" />
+								<path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" />
+								<path d="M9.8 4.4A2 2 0 1 1 11 8H2" />
+							</svg>
+							<section class="flex flex-col">
+								<span class="text-center text-xl" id="wind">xxkm/h</span>
+								<h3 class="text-xl" id="wind-title">Wind speed</h3>
+							</section>
+						</section>
+					</section>
+				</div>
+			</div>
+		</main>
+
+		<script type="module" src="/src/main.js"></script>
+	</body>
+</html>
