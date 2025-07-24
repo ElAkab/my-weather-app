@@ -1,6 +1,8 @@
 import { createIcons, icons } from "lucide";
 createIcons({ icons }); // Initialise tous les icônes disponibles
 
+const apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY;
+
 let searchInput = document.getElementById("search");
 let validationBtn = document.getElementById("validation");
 let weatherContainer = document.getElementById("weather-container");
