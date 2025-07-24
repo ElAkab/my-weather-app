@@ -23,6 +23,7 @@ validationBtn.addEventListener("click", () => {
 	if (searchValue) {
 		console.log("City founded : " + searchValue);
 		getWeather(searchValue);
+		searchInput.value = "";
 	} else {
 		console.log("Error.. sorry...");
 	}
