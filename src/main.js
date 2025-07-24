@@ -66,7 +66,7 @@ function showData(data) {
 
 		switch (data.weather[0].main) {
 			case "Clear":
-				image.src = "./public/img/clear.png";
+				image.src = "/img/clear.png";
 				break;
 			case "Clouds":
 				image.src = "/img/clouds.png";
