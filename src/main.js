@@ -159,7 +159,7 @@ if ("geolocation" in navigator) {
 }
 
 function showError(message = "Something went wrong") {
-	image.src = "./public/img/404.png";
+	image.src = "/img/404.png";
 	city.textContent = message;
 	temperature.textContent = "";
 	humidity.textContent = "";
