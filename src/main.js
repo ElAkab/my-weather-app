@@ -47,7 +47,8 @@ async function getWeather(city) {
 		}
 	} catch (error) {
 		console.error("Failed to fetch weather data:", error);
-		showError("City not found");
+		weatherContainer.classList.remove("opacity-0");
+		setTimeout(showError("City not found"), 300);
 	}
 }
 
@@ -160,13 +161,12 @@ if ("geolocation" in navigator) {
 	);
 }
 
-function showError(message = "Something went wrong") {
+function showError(message) {
 	image.src = "/img/404.png";
 	city.textContent = message;
 	temperature.textContent = "";
 	humidity.textContent = "";
 	wind.textContent = "";
-	weatherContainer.classList.remove("opacity-0");
 	weatherContainer.classList.add("max-h-[300px]", "opacity-100");
 	if ((humidityTitle !== "" || windTitle !== "") && allSvg) {
 		humidityTitle.classList.add("opacity-0");
